@@ -1,0 +1,166 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   DARWOFT DESIGN SYSTEM — globals.css  v2.0.0
+   shadcn/ui compatible · Tailwind v3/v4
+   Source of truth: live computed styles from https://www.darwoft.com
+   Brand is DARK-FIRST. `:root` = light theme, `.dark` = signature dark theme.
+   Color variables use HSL channels (shadcn convention): `hsl(var(--x))`.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background:            0 0% 100%;
+    --foreground:            0 0% 8%;
+    --card:                  0 0% 100%;
+    --card-foreground:       0 0% 8%;
+    --popover:               0 0% 100%;
+    --popover-foreground:    0 0% 8%;
+
+    --primary:               207 88% 50%;
+    --primary-foreground:    0 0% 100%;
+    --secondary:             240 6% 97%;
+    --secondary-foreground:  0 0% 8%;
+    --muted:                 240 6% 97%;
+    --muted-foreground:      240 3% 43%;
+    --accent:                163 100% 63%;
+    --accent-foreground:     180 3% 6%;
+    --destructive:           9 86% 59%;
+    --destructive-foreground:0 0% 100%;
+
+    --border:                0 0% 90%;
+    --input:                 0 0% 90%;
+    --ring:                  207 88% 50%;
+
+    --brand-blue:  207 88% 50%;
+    --brand-mint:  163 100% 63%;
+    --brand-lime:  65 86% 59%;
+    --brand-steel: 210 23% 35%;
+    --success:     163 72% 44%;
+    --warning:     43 76% 56%;
+
+    --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --font-sans:    'Inter', system-ui, -apple-system, sans-serif;
+
+    --radius: 0.75rem;
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-pill: 9999px;
+
+    --shadow-ring: 0 0 0 1px hsl(0 0% 0% / 0.08);
+    --shadow-sm:   0 2px 4px 0 hsl(0 0% 0% / 0.06), 0 1px 0 0 hsl(0 0% 0% / 0.04);
+    --shadow-md:   0 8px 24px -6px hsl(0 0% 0% / 0.16);
+    --shadow-lg:   0 20px 48px -12px hsl(0 0% 0% / 0.22);
+
+    --duration-fast: 150ms;
+    --duration-default: 250ms;
+    --duration-slow: 400ms;
+    --duration-cinematic: 600ms;
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    --chart-1: 207 88% 50%;
+    --chart-2: 163 100% 63%;
+    --chart-3: 65 86% 59%;
+    --chart-4: 210 23% 35%;
+    --chart-5: 240 3% 46%;
+  }
+
+  .dark {
+    --background:            0 0% 8%;
+    --foreground:            0 0% 95%;
+    --card:                  240 3% 11%;
+    --card-foreground:       0 0% 95%;
+    --popover:               240 3% 11%;
+    --popover-foreground:    0 0% 95%;
+
+    --primary:               207 88% 50%;
+    --primary-foreground:    0 0% 100%;
+    --secondary:             240 3% 14%;
+    --secondary-foreground:  0 0% 95%;
+    --muted:                 240 3% 14%;
+    --muted-foreground:      240 3% 46%;
+    --accent:                163 100% 63%;
+    --accent-foreground:     180 3% 6%;
+    --destructive:           9 86% 59%;
+    --destructive-foreground:0 0% 100%;
+
+    --border:                0 0% 100% / 0.10;
+    --input:                 0 0% 100% / 0.15;
+    --ring:                  207 88% 50%;
+
+    --brand-blue:  207 88% 50%;
+    --brand-mint:  163 100% 63%;
+    --brand-lime:  65 86% 59%;
+    --brand-steel: 210 23% 35%;
+    --success:     163 72% 50%;
+    --warning:     43 76% 56%;
+
+    --shadow-ring: 0 0 0 1px hsl(0 0% 100% / 0.15);
+    --shadow-sm:   0 2px 4px 0 hsl(0 0% 0% / 0.40), 0 1px 0 0 hsl(0 0% 0% / 0.20);
+    --shadow-md:   0 8px 24px -6px hsl(0 0% 0% / 0.50);
+    --shadow-lg:   0 20px 48px -12px hsl(0 0% 0% / 0.60);
+
+    --chart-1: 207 88% 50%;
+    --chart-2: 163 100% 63%;
+    --chart-3: 65 86% 59%;
+    --chart-4: 210 23% 45%;
+    --chart-5: 0 0% 60%;
+  }
+}
+
+:root {
+  --blue-50:#F3F9FE; --blue-100:#E7F4FE; --blue-200:#C4E2FB; --blue-300:#A0D1F9; --blue-400:#58AFF4;
+  --blue-500:#118DF0; --blue-600:#0E78CC; --blue-700:#0C63A8; --blue-800:#094E84; --blue-900:#073860; --blue-950:#04233C;
+  --mint-50:#F6FFFC; --mint-100:#ECFFFA; --mint-200:#D0FFF2; --mint-300:#B3FFEA; --mint-400:#7BFFDA;
+  --mint-500:#42FFCA; --mint-600:#38D9AC; --mint-700:#2EB28D; --mint-800:#248C6F; --mint-900:#1A6651; --mint-950:#104032;
+  --lime-50:#FEFEF5; --lime-100:#FCFEEC; --lime-200:#F8FCCE; --lime-300:#F5FAB1; --lime-400:#EDF776;
+  --lime-500:#E5F33C; --lime-600:#C3CF33; --lime-700:#A0AA2A; --lime-800:#7E8621; --lime-900:#5C6118; --lime-950:#393D0F;
+  --steel-50:#F6F7F8; --steel-100:#ECEEF1; --steel-200:#D0D6DB; --steel-300:#B5BDC5; --steel-400:#7D8C9A;
+  --steel-500:#455A6F; --steel-600:#3B4C5E; --steel-700:#303F4E; --steel-800:#26323D; --steel-900:#1C242C; --steel-950:#11161C;
+  --success-50:#F4FCF9; --success-100:#E9F9F4; --success-200:#C7EFE3; --success-300:#A5E5D2; --success-400:#62D2B1;
+  --success-500:#1FBF8F; --success-600:#1AA27A; --success-700:#168664; --success-800:#11694F; --success-900:#0C4C39; --success-950:#083024;
+  --warning-50:#FEFBF5; --warning-100:#FCF8EC; --warning-200:#F8ECCE; --warning-300:#F5E1B1; --warning-400:#EDCB76;
+  --warning-500:#E5B53C; --warning-600:#C39A33; --warning-700:#A07F2A; --warning-800:#7E6421; --warning-900:#5C4818; --warning-950:#392D0F;
+  --destructive-50:#FEF6F5; --destructive-100:#FEEEEB; --destructive-200:#FBD4CE; --destructive-300:#F9BAB1; --destructive-400:#F48776;
+  --destructive-500:#F0533B; --destructive-600:#CC4732; --destructive-700:#A83A29; --destructive-800:#842E20; --destructive-900:#602118; --destructive-950:#3C150F;
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 1.05;
+  }
+  .overline {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: hsl(var(--muted-foreground));
+  }
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+}
